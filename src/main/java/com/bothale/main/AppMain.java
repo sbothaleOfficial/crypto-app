@@ -18,11 +18,11 @@ public class AppMain {
         LOGGER.info("Generating client's key pair...");
         KeyPair clientKeyPair = CryptoUtility.generateKeyPair();
 
-        // Initialize server (no need for client's certificate anymore)
+        // Initialize server
         LOGGER.info("Initializing the server...");
         Server server = new Server();
 
-        // Initialize server in a new thread (for demo purposes)
+        // Initialize server in a new thread
         new Thread(() -> {
             try {
                 server.start();
